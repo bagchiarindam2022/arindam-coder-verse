@@ -9,7 +9,7 @@ import { Github, Linkedin, Mail, Download, ExternalLink, Code, Database, Cpu, Gl
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [typewriterText, setTypewriterText] = useState("");
-  const fullText = "Hi, I'm Arindam Bagchi — a full-stack developer, AI tinkerer, and future-ready coder.";
+  const fullText = "Hi, I'm Arindam Bagchi";
 
   useEffect(() => {
     let i = 0;
