@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,7 +9,7 @@ import { Github, Linkedin, Mail, Download, ExternalLink, Code, Database, Cpu, Gl
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [typewriterText, setTypewriterText] = useState("");
-  const fullText = "Hi, I'm Arindam — a full-stack developer, AI tinkerer, and future-ready coder.";
+  const fullText = "Hi, I'm Arindam Bagchi — a full-stack developer, AI tinkerer, and future-ready coder.";
 
   useEffect(() => {
     let i = 0;
@@ -115,10 +114,12 @@ const Index = () => {
           <div className="mb-8 relative">
             <div className="w-48 h-48 mx-auto mb-8 relative">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-neon-blue to-deep-violet p-1 animate-glow">
-                <div className="w-full h-full rounded-full bg-dark-card flex items-center justify-center">
-                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-6xl font-bold gradient-text">
-                    AB
-                  </div>
+                <div className="w-full h-full rounded-full bg-dark-card flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/d5e49e31-3466-434c-a651-834a3c6df5c7.png" 
+                    alt="Arindam Bagchi"
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
               </div>
             </div>
