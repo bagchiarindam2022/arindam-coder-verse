@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, Download, ExternalLink, Code, Database, Cpu, Globe } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code, Database, Cpu, Globe } from "lucide-react";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -59,7 +59,7 @@ const Index = () => {
       degree: "B.Tech (CSE, IoT/Cybersecurity/Blockchain)",
       institution: "Institute of Engineering and Management, Kolkata",
       duration: "2022–2026",
-      grade: "CGPA: 8.6"
+      grade: "CGPA: 8.54"
     },
     {
       degree: "ISC Science",
@@ -173,15 +173,10 @@ const Index = () => {
               </p>
               
               <p className="text-lg text-gray-300 leading-relaxed">
-                Currently in my final year at IEM Kolkata, I've maintained an impressive 8.6 CGPA 
+                Currently in my final year at IEM Kolkata, I've maintained an impressive 8.54 CGPA 
                 while working on diverse projects ranging from web applications to IoT systems. 
                 I'm always eager to learn new technologies and take on challenging projects.
               </p>
-              
-              <Button className="bg-deep-violet hover:bg-deep-violet/80 text-white px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-deep-violet/50">
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </Button>
             </div>
             
             <div className="space-y-6">
