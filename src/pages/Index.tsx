@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -38,19 +39,22 @@ const Index = () => {
       title: "Insurance Management System with Live Tracking",
       description: "Web app to manage structured policy & claims data",
       tech: ["HTML", "CSS", "JavaScript", "Python", "MongoDB"],
-      type: "Web Application"
+      type: "Web Application",
+      github: "https://github.com/bagchiarindam2022/Insurance_Management.git"
     },
     {
       title: "Air & Water Quality Index Monitoring",
       description: "Real-time prediction of environmental quality",
       tech: ["Scikit-learn", "TensorFlow", "Pandas", "Matplotlib"],
-      type: "AI/ML Project"
+      type: "AI/ML Project",
+      github: "https://github.com/bagchiarindam2022/Air_and_Water_Quality_Index_and_Environmental_Monitoring.git"
     },
     {
       title: "Smart IoT Pillbox",
       description: "Medicine reminder system using sensors and ESP8266",
       tech: ["Arduino", "C++", "Python"],
-      type: "IoT Project"
+      type: "IoT Project",
+      github: "https://github.com/bagchiarindam2022/Smart_IoT_Pillbox_with_Medicine_Reminder.git"
     }
   ];
 
@@ -126,8 +130,8 @@ const Index = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 font-jetbrains break-words">
-              <span className="gradient-text typewriter">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 font-jetbrains">
+              <span className="gradient-text typewriter whitespace-nowrap overflow-hidden">
                 {typewriterText}
               </span>
             </h1>
@@ -321,7 +325,11 @@ const Index = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Button size="sm" className="bg-neon-blue/20 hover:bg-neon-blue/30 text-neon-blue border border-neon-blue/50">
+                    <Button 
+                      size="sm" 
+                      className="bg-neon-blue/20 hover:bg-neon-blue/30 text-neon-blue border border-neon-blue/50"
+                      onClick={() => window.open(project.github, '_blank')}
+                    >
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </Button>
