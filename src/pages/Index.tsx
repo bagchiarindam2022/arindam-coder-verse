@@ -63,13 +63,13 @@ const Index = () => {
     },
     {
       degree: "ISC Science",
-      institution: "Douglas Memorial School, Barrackpore",
+      institution: "Douglas Memorial Higher Secondary School, Barrackpore",
       duration: "2020–2022",
       grade: "90%"
     },
     {
       degree: "ICSE",
-      institution: "Douglas Memorial School, Barrackpore",
+      institution: "Douglas Memorial Higher Secondary School, Barrackpore",
       duration: "2007–2020",
       grade: "88.2%"
     }
@@ -126,13 +126,13 @@ const Index = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 font-jetbrains">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 font-jetbrains break-words">
               <span className="gradient-text typewriter">
                 {typewriterText}
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Final year Computer Science student with strong foundations in algorithms, 
               data structures, and full-stack development, seeking a software development role 
               to contribute to innovative projects and continue learning.
