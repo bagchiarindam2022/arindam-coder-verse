@@ -5,11 +5,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 import { Github, Linkedin, Mail, ExternalLink, Code, Database, Cpu, Globe } from "lucide-react";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [typewriterText, setTypewriterText] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
   const fullText = "Hi, I'm Arindam Bagchi";
 
   useEffect(() => {
@@ -100,6 +108,40 @@ const Index = () => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -451,28 +493,44 @@ const Index = () => {
             <Card className="terminal-border">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6 text-white">Send a Message</h3>
-                <form className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Input 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       placeholder="Your Name" 
                       className="bg-dark-bg border-gray-600 text-white placeholder-gray-400 focus:border-neon-blue"
+                      required
                     />
                   </div>
                   <div>
                     <Input 
                       type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       placeholder="Your Email" 
                       className="bg-dark-bg border-gray-600 text-white placeholder-gray-400 focus:border-neon-blue"
+                      required
                     />
                   </div>
                   <div>
                     <Textarea 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       placeholder="Your Message" 
                       className="bg-dark-bg border-gray-600 text-white placeholder-gray-400 focus:border-neon-blue min-h-[120px]"
+                      required
                     />
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-neon-blue to-deep-violet hover:from-neon-blue/80 hover:to-deep-violet/80 text-white font-semibold py-3 rounded-lg transition-all hover:shadow-lg">
-                    Send Message
+                  <Button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-neon-blue to-deep-violet hover:from-neon-blue/80 hover:to-deep-violet/80 text-white font-semibold py-3 rounded-lg transition-all hover:shadow-lg disabled:opacity-50"
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
