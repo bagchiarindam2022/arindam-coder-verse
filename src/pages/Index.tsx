@@ -92,7 +92,7 @@ const Index = () => {
       company: "AICTE Eduskills Google for Developers Virtual Internship",
       duration: "Apr 2024 - Jun 2024",
       description: "Completed comprehensive training in artificial intelligence and machine learning, working on practical projects and gaining hands-on experience with industry-standard tools.",
-      skills: ["Machine Learning", "Python", "TensorFlow", "Data Science"]
+      skills: ["Machine Learning", "Python", "TensorFlow", "Data Science", "Computer Vision"]
     }
   ];
 
