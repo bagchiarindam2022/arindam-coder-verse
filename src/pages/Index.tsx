@@ -81,18 +81,18 @@ const Index = () => {
 
   const experience = [
     {
-      role: "Full Stack Developer Intern",
-      company: "Tech Solutions Inc.",
-      duration: "Jun 2024 - Aug 2024",
-      description: "Developed responsive web applications using React and Node.js, collaborated with cross-functional teams to deliver high-quality software solutions.",
-      skills: ["React", "Node.js", "MongoDB", "REST APIs"]
+      role: "Data Analytics Intern",
+      company: "Sabudh Foundation in collaboration with STPI",
+      duration: "Jul 2025 - Present",
+      description: "Working on data analytics projects, applying machine learning techniques to extract insights from complex datasets and developing predictive models.",
+      skills: ["Data Analytics", "Python", "Applied Machine Learning"]
     },
     {
-      role: "Web Development Freelancer",
-      company: "Self-Employed",
-      duration: "Jan 2024 - Present",
-      description: "Created custom websites and web applications for small businesses, focusing on modern UI/UX and performance optimization.",
-      skills: ["JavaScript", "HTML/CSS", "WordPress", "SEO"]
+      role: "AI-ML Intern",
+      company: "AICTE Eduskills Google for Developers Virtual Internship",
+      duration: "Apr 2024 - Jun 2024",
+      description: "Completed comprehensive training in artificial intelligence and machine learning, working on practical projects and gaining hands-on experience with industry-standard tools.",
+      skills: ["Machine Learning", "Python", "TensorFlow", "Data Science"]
     }
   ];
 
