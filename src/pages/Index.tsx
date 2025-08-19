@@ -79,6 +79,23 @@ const Index = () => {
     }
   ];
 
+  const experience = [
+    {
+      role: "Full Stack Developer Intern",
+      company: "Tech Solutions Inc.",
+      duration: "Jun 2024 - Aug 2024",
+      description: "Developed responsive web applications using React and Node.js, collaborated with cross-functional teams to deliver high-quality software solutions.",
+      skills: ["React", "Node.js", "MongoDB", "REST APIs"]
+    },
+    {
+      role: "Web Development Freelancer",
+      company: "Self-Employed",
+      duration: "Jan 2024 - Present",
+      description: "Created custom websites and web applications for small businesses, focusing on modern UI/UX and performance optimization.",
+      skills: ["JavaScript", "HTML/CSS", "WordPress", "SEO"]
+    }
+  ];
+
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
@@ -95,7 +112,7 @@ const Index = () => {
               &lt;Arindam/&gt;
             </div>
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'experience', 'projects', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -289,6 +306,44 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16 gradient-text font-jetbrains">
+            &lt;Experience/&gt;
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {experience.map((exp, index) => (
+                <Card key={index} className="terminal-border hover:shadow-lg hover:shadow-neon-blue/20 transition-all">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                      <div className="mb-4 md:mb-0">
+                        <h3 className="text-xl font-semibold text-white mb-2">{exp.role}</h3>
+                        <h4 className="text-lg text-neon-blue font-medium mb-2">{exp.company}</h4>
+                        <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                      </div>
+                      <Badge className="bg-deep-violet/20 text-deep-violet self-start">
+                        {exp.duration}
+                      </Badge>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {exp.skills.map((skill) => (
+                        <Badge key={skill} variant="outline" className="border-gray-600 text-gray-300 hover:border-neon-blue hover:text-neon-blue">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
